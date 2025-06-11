@@ -1,0 +1,15 @@
+@keyframes fadeInFromLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  .aboutItem {
+    opacity: 0;
+    animation: fadeInFromLeft 0.50s cubic-bezier(0.35, 0, 0.25, 1) forwards;
+  }

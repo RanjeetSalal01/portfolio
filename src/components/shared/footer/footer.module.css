@@ -1,0 +1,57 @@
+/* styles.css */
+.stickyFooter {
+    position: fixed;
+    bottom: 0;
+  }
+  
+  .stickyFooter::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 90px;
+    margin: 0 auto;
+    background-color: #a8b2d1;
+    opacity: 0;
+    animation: fadeInLine 0.5s ease-in-out forwards;
+    animation-delay: 0.25s;
+  }
+  
+  @keyframes fadeInLine {
+    from {
+      opacity: 0;
+      height: 0;
+    }
+    to {
+      opacity: 1;
+      height: 90px;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .footerItem {
+    opacity: 0;
+    animation: fadeInUp 0.25s cubic-bezier(0.35, 0, 0.25, 1) forwards;
+  }
+  
+  .footerItem:nth-child(1) {
+    animation-delay: 0.75s;
+  }
+  
+  .footerItem:nth-child(2) {
+    animation-delay: 0.8s;
+  }
+  
+  .footerItemMounted {
+    opacity: 1;
+  }
+  
